@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Restaurant_Management_System.Models.Order>
+
+<h2>Orders</h2>
+
+<a asp-action="Create" class="btn btn-primary">
+    Create Order
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Quantity</th>
+            <th>Order Date</th>
+            <th>Menu Item Id</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.Quantity</td>
+                <td>@order.OrderDate</td>
+                <td>@order.MenuItemId</td>
+            </tr>
+        }
+    </tbody>
+</table>

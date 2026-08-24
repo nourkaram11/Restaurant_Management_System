@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Restaurant_Management_System.Models.Category>
+
+<h2>Categories</h2>
+
+<a asp-action="Create" class="btn btn-primary">Add Category</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Category Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.CategoryName</td>
+            </tr>
+        }
+    </tbody>
+</table>
